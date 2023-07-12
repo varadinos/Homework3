@@ -43,5 +43,19 @@ public class ComputerDemo {
         System.out.println("Laptop Free Memory: " + laptop.freeMemory);
         System.out.println("Laptop OS Version: " + laptop.operationSystem);
 
+        Computer newComputer = new Computer(2004, 2000,false,
+                512,100, "Windows 7");
+
+        Computer newLaptop = new Computer(2004, 2500, true, 1000, 512, "MacOSX");
+
+        int comparePrice1 = newComputer.comparePrice(newLaptop);
+        System.out.println(comparePrice1);
+
+        int comparePrice2 = laptop.comparePrice(newLaptop);
+        System.out.println(comparePrice2);
+
+        int comparePrice3 = desktopPc.comparePrice(newComputer);
+        System.out.println(comparePrice3);
+
     }
 }
